@@ -1,3 +1,3 @@
 FROM cr.erisa.uk/shell2http
 RUN apk add --no-cache whois
-CMD ["-cgi", "/", "whois \"${PATH_INFO:1}\""]
+CMD ["-host", "0.0.0.0", "-cgi", "/", "whois \"${PATH_INFO:1}\""]
